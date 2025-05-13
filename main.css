@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* h1, h2, h3 {
+    color: #333;
+} */
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    max-width: 600px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.header {
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Keep only the Sudoku board specific styling */
+#sudoku-board {
+    width: 100%;
+    max-width: 450px;
+    aspect-ratio: 1 / 1;
+    background-color: #2a2a2a;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    gap: 1px;
+    padding: 5px;
+}
+
+.cell {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.cell input {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.cell-fixed {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.cell-highlight {
+    background-color: #e6f7ff;
+}
+
+.border-right {
+    border-right: 3px solid #000;
+}
+
+.border-bottom {
+    border-bottom: 3px solid #000;
+}
+
+.controls {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button {
+    display: inline-block;
+    font-size: 16px;
+    color: #ffffff;
+    background: #e8491d;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #333;
+}
+
+#message {
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Message styling */
+.message-success {
+    color: rgb(22, 163, 74); /* Tailwind green-600 */
+}
+
+.message-error {
+    color: rgb(220, 38, 38); /* Tailwind red-600 */
+}
+
+.difficulty-selector {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.difficulty-selector label {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.difficulty-selector input {
+    margin-right: 5px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 640px) {
+    .cell {
+        font-size: 16px;
+    }
+    
+    .cell input {
+        font-size: 16px;
+    }
+    
+    #sudoku-board {
+        max-width: 320px;
+    }
+}
